@@ -8,6 +8,7 @@ if __name__ == "__main__":
     sub = sub(a, b)
     mul = mul(a, b)
     div = div(a, b)
+
     print(f"{a} + {b} = {add}")
     print(f"{a} - {b} = {sub}")
     print(f"{a} * {b} = {mul}")
