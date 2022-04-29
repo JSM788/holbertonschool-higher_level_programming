@@ -15,13 +15,13 @@ if __name__ == "__main__":
     op = argv[2]
 
     if op == "+":
-        print(f"{a} {op} {b} = ", add(a, b))
+        print(f"{a} {op} {b} =", add(a, b))
     elif op == "-":
-        print(f"{a} {op} {b} = ", sub(a, b))
+        print(f"{a} {op} {b} =", sub(a, b))
     elif op == "*":
-        print(f"{a} {op} {b} = ", mul(a, b))
+        print(f"{a} {op} {b} =", mul(a, b))
     elif op == "/":
-        print(f"{a} {op} {b} = ", div(a, b))
-    else:
+        print(f"{a} {op} {b} =", div(a, b))
+    elif op != "+" and op != "-" and op != "*" and op != "/":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
