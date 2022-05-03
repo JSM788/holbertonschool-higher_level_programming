@@ -2,4 +2,7 @@
 
 def multiple_returns(sentence):
     lens = len(sentence)
-    return(lens, sentence[0])
+    if sentence == '\0':
+        return(None, sentence[0])
+    else:
+        return(lens, sentence[0])
