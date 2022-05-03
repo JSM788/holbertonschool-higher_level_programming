@@ -1,10 +1,8 @@
 def max_integer(my_list=[]):
 
-    largest_number = my_list[0]
-    lens = len(my_list)
-    for number in my_list:
-        if lens == 0:
-            return(None)
-        elif number > largest_number:
-            largest_number = number
-            return(largest_number)
+    new_list = sorted(my_list)
+    lens = len(new_list)
+    if lens == 0:
+        return(None)
+    else:
+        return(new_list[-1])
