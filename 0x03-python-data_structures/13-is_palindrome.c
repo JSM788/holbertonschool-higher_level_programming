@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- *
- *
- *
+ * is_palindrome - check the code
+ * @head: double pointer
+ * Return: 0
  */
 
 int is_palindrome(listint_t **head)
