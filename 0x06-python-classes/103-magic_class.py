@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 import math
+"""Creating a class MagicClass"""
 
 
 class MagicClass:
+    """Assembly Magic"""
 
     def __init__(self, radius=0):
         self._MagicClass__radius = 0
