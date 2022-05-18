@@ -2,6 +2,7 @@
 """Creating a class MagicClass"""
 import math
 
+
 class MagicClass:
     """Assembly Magic"""
 
