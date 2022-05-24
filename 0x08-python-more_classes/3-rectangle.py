@@ -51,8 +51,9 @@ class Rectangle:
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
-            return(0)
-        for i in range(self.__height):
-            for j in range(self.__width):
-                var = (self.__width * "#" + "\n") * self.__height
-                return(var.rstrip())
+            return([])
+        else:
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    var = (self.__width * "#" + "\n") * self.__height
+                    return(var.rstrip())
