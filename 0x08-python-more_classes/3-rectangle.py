@@ -49,7 +49,7 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         self.__width = value
 
-    def __str__(self):
+    def __repr__(self):
         if self.__width == 0 or self.__height == 0:
             return([])
         else:
