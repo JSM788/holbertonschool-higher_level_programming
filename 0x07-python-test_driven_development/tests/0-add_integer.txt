@@ -16,7 +16,8 @@ Description: This function adds 2 integers
 
 Tests:
 	
-	
+	>>> add_integer(2)
+	100
 	
 	>>> add_integer(2, 1)
 	3
