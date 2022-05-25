@@ -17,6 +17,8 @@ Description: This function print a square
 
 Tests:
 	
+	>>> print_square(0)
+	
 	>>> print_square(6, 2)
 	Traceback (most recent call last):
 	TypeError: print_square() takes 1 positional argument but 2 were given
@@ -60,3 +62,6 @@ Tests:
 	>>> print_square(float(50.4))
         Traceback (most recent call last):
         TypeError: size must be an integer
+
+	
+	
