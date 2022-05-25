@@ -1,0 +1,27 @@
+
+                       TESTING TEXT IDENTATION
+
+==================================================================
+
+Import the function:
+
+	>>>text_indentation = __import__('5-text_indentation').text_indentation
+
+File: ``5-text_indentation``
+
+Function: text_indentation() 
+
+Description: This function prints text and makes a line break after these characters(".", "?", ":")
+
+==================================================================
+
+Tests:
+
+	>>> text_indentation("Hi")
+        Hi	
+
+	>>> text_indentation(5)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+
