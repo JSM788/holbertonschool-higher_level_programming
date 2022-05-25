@@ -16,7 +16,11 @@ Description: This function returns your first and last name
 ==================================================================
 
 Tests:
+	>>> say_my_name('', '')
+        My name is  
 
+	>>> say_my_name(str(2), str(4))
+        My name is 2 4
 
 	>>> say_my_name("Juan", 4"Salinas")
 	Traceback (most recent call last):
