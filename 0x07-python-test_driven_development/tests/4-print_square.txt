@@ -50,3 +50,13 @@ Tests:
 	>>> print_square(\n)
 	Traceback (most recent call last):
 	SyntaxError: unexpected character after line continuation character
+
+	
+	>>> print_square(int(000000005))
+        Traceback (most recent call last):
+        SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+
+	
+	>>> print_square(float(50.4))
+        Traceback (most recent call last):
+        TypeError: size must be an integer
