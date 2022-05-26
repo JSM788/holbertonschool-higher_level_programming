@@ -26,6 +26,22 @@ class TestMaxInteger(unittest.TestCase):
         lst = ['issam', 5, 6, 9]
         with self.assertRaises(TypeError):
             max_integer(lst)
+    def test_max_int_neg(self):
+        """ tests if list has a negative int
+        """
+        self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
+    def test_negative(self):
+        l = [-2, -6, -1]
+        result = max_integer(l)
+        self.assertEqual(result, -1)
+
+    def test_maximum_integer(self):
+        self.assertEqual(max_integer([-1, -9, -2]), -1)
+
+    def test_empty_list(self):
+        self.assertIsNone(max_integer([]))
+
+
 
 
 if __name__ == "__main__":
