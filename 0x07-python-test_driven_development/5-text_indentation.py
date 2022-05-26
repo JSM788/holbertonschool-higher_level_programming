@@ -11,11 +11,15 @@ def text_indentation(text):
 
     flag = 0
     for x in text:
-        if (x == '.' or x == '?' or x == ':'):
-            flag = 1
-            print(x)
-            print()
-        else:
-            if (flag != 1):
-                print(x, end='')
-            flag = 0
+        if flag == 0:
+            if (x == ' '):
+                continue
+            else:
+                flag = 1
+
+        if flag == 1:
+            if x == '.' or x == '?' or x == ':':
+                print(x + "\n")
+                flag = 0
+            else:
+                print(x, end="")
