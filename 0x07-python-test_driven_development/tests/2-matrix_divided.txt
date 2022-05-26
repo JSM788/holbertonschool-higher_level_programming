@@ -17,10 +17,6 @@ Description: This function divide a matrix
 
 Tests:
 
-	>>> matrix_divided("Hello", "Hi")
-	Traceback (most recent call last):
-	TypeError: unsupported operand type(s) for /: 'str' and 'str'
-
 	>>> matrix_divided(matrix, 3a)
 	Traceback (most recent call last):
 	SyntaxError: invalid syntax
