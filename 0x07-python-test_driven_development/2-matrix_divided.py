@@ -1,20 +1,39 @@
 #!/usr/bin/python3
-"""This function divide a matrix"""
+""" Divide a matrix module """
 
 
 def matrix_divided(matrix, div):
-    """The divided matrix returns"""
+    """ divides all elements of a matrix. """
 
-    typeError = 'matrix must be a matrix (list of lists) of integers/floats'
-    new_matrix = []
-    if isinstance(matrix, (list, float, int)) is not True:        raise TypeError(typeError)
-    elif isinstance(div, (int, float)) is not True:
-        raise TypeError('div must be a number')
-    elif len(set([len(row) for row in matrix])) != 1:
-        raise TypeError('Each row of the matrix must have the same size')
-    elif div == 0:
-        raise ZeroDivisionError('division by zero')
-    else:
-        for i in matrix:
-            new_matrix.append(list(map(lambda x: round(x / div, 2), i)))
-        return(new_matrix)
+    """ error messages """
+    typerror = 'matrix must be a matrix (list of lists) of integers/floats'
+    sizerror = 'Each row of the matrix must have the same size'
+    diverror = 'div must be a number'
+    zererror = 'division by zero'
+
+    """ que matrix sea lista """
+    if not isinstance(matrix, list):
+        raise TypeError(typerror)
+
+    """ elementos de la matrix deben ser listas """
+    if not all([isinstance(row, list) for row in matrix]):
+        raise TypeError(typerror)
+
+    """ las listas deben tener el mismo tamaño """
+    if len(set([len(row) for row in matrix])) != 1:
+        raise TypeError(sizerror)
+
+    """ los elementos dentro de cada row en matrix deben ser int or float """
+    for item in [item for row in matrix for item in row]:
+        if not isinstance(item, (int, float)):
+            raise TypeError(typerror)
+
+    """ div debe ser integer or float """
+    if not isinstance(div, (int, float)):
+        raise TypeError(diverror)
+
+    """ div no debe ser cero """
+    if div == 0:
+        raise ZeroDivisionError(zererror)
+
+    return ([[round(item / div, 2) for item in row] for row in matrix])
