@@ -59,7 +59,7 @@ Tests:
 	>>> my_list.print_sorted()
 	[]
 
-	
+
 	>>> print(my_list[10])
 	Traceback (most recent call last):
 	IndexError: list index out of range
@@ -68,3 +68,10 @@ Tests:
 	>>> my_list = MyList(['hello', 'juan'])
 	>>> print(my_list)
 	['hello', 'juan']
+	
+	
+	>>> my_list = MyList((1, 2, 3, 4, 5))
+	>>> print(my_list)
+	[1, 2, 3, 4, 5]
+
+
