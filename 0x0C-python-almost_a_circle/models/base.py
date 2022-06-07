@@ -1,4 +1,4 @@
-#!/usr/bin/pyt33
+#!/usr/bin/python3
 """Defining id for all other classes"""
 import json
 
