@@ -28,9 +28,8 @@ class Base():
     def save_to_file(cls, list_objs):
         """writes the JSON string representation
         of list_objs to a file"""
-        if list_objs is None:
-            return []
-        new_list = []
+        if list_objs:
+            new_list = []
         for i in list_objs:
             dictionary = i.to_dictionary()
             new_list.append(dictionary)
