@@ -35,7 +35,7 @@ class Base():
             dictionary = i.to_dictionary()
             new_list.append(dictionary)
         with open(cls.__name__ + ".json", "w", encoding="utf-8") as f:
-            return f.write(cls.to_json_string(new_list))
+            f.write(cls.to_json_string(new_list))
 
     def from_json_string(json_string):
         """Returns the list of the JSON string
