@@ -1,4 +1,4 @@
-#!/usr/bin/pythonear
+#!/usr/bin/pyt33
 """Defining id for all other classes"""
 import json
 
