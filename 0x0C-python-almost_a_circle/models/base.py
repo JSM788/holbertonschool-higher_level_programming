@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defining id for all other classes"""
+"""Defining id for all other classes."""
 import json
 
 
@@ -30,13 +30,12 @@ class Base():
         of list_objs to a file"""
         if list_objs is None:
             return []
+        new_list = []
+        for i in list_objs:
+            dictionary = i.to_dictionary()
+            new_list.append(dictionary)
         with open(cls.__name__ + ".json", "w", encoding="utf-8") as f:
-
-            new_list = []
-            for i in list_objs:
-                dictionary = i.to_dictionary()
-                new_list.append(dictionary)
-            return f.write(Base.to_json_string(new_list))
+            return f.write(cls.to_json_string(new_list))
 
     def from_json_string(json_string):
         """Returns the list of the JSON string
