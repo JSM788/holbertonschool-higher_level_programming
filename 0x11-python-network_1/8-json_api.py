@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a Python script that takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter"""
+"""Write a Python script that takes in a letter and sends a POST
+request to http://0.0.0.0:5000/search_user with the letter as a parameter"""
 if __name__ == "__main__":
     import requests
     from sys import argv
@@ -8,7 +9,7 @@ if __name__ == "__main__":
         var = ""
     else:
         var = argv[1]
-    
+
     url = "http://0.0.0.0:5000/search_user"
     r = request.post(url, data={"q": var})
     try:
@@ -19,4 +20,3 @@ if __name__ == "__main__":
             print("[{}] {}".format(js.get("id"), js.get("name")))
     except ValueError:
         print("Not valid JSON")
-
