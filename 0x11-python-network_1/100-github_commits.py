@@ -9,6 +9,6 @@ if __name__ == "__main__":
 
     r = requests.get(url)
     js = r.json()
-    for i in range(10):
-        print("{}: {}".format(js[i].get("sha"),
-              js[i].get("commit").get("author").get("name")))
+    for i in js[0:10]:
+        print("{}: {}".format(i.get("sha"),
+              i.get("commit").get("author").get("name")))
